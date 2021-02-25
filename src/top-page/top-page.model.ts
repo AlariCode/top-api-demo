@@ -8,6 +8,7 @@ export enum TopLevelCategory {
 export class TopPageModel {
 	firstCategory: TopLevelCategory;
 	secondCategory: string;
+	alias: string;
 	title: string;
 	category: string;
 	hh?: {
