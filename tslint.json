@@ -7,7 +7,11 @@
 		"curly": true,
 		"prefer-for-dcof": true,
 		"forin": true,
-		"no-console": [true, "log", "error"],
+		"no-console": [
+			true,
+			"log",
+			"error"
+		],
 		"no-debugger": true,
 		"no-duplicate-super": true,
 		"no-duplicate-switch-case": true,
@@ -26,19 +30,41 @@
 		"prefer-const": true,
 		"arrow-return-shorthand": true,
 		"class-name": true,
-		"file-name-casing": [true, "kebab-case"],
-		"interface-name": [true, "always-prefix"],
-		"prefer-switch": [true, { "min-cases": 3 }],
+		"file-name-casing": [
+			true,
+			"kebab-case"
+		],
+		"prefer-switch": [
+			true,
+			{
+				"min-cases": 3
+			}
+		],
 		"switch-final-break": true,
 		"import-spacing": true,
-		"max-line-length": [true, 120],
+		"max-line-length": [
+			true,
+			120
+		],
 		"no-trailing-whitespace": false,
-		"quotemark": [true, "single"],
-		"semicolon": [true, "always"],
+		"quotemark": [
+			true,
+			"single"
+		],
+		"semicolon": [
+			true,
+			"always"
+		],
 		"trailing-comma": false,
-		"indent": [true, "tabs", 4],
+		"indent": [
+			true,
+			"tabs",
+			4
+		],
 		"linterOptions": {
-			"exclude": ["./src/**/*.d.ts"]
+			"exclude": [
+				"./src/**/*.d.ts"
+			]
 		}
 	}
 }
