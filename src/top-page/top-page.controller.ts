@@ -1,31 +1,32 @@
-import { Body, Controller, Delete, Get, Param, Post } from '@nestjs/common';
-import { ConfigService } from '@nestjs/config';
-import { SuccessResponse } from 'src/helpers/success.response';
-import { DeleteTopPageDto } from './dto/delete-top-page.dto';
+import { Body, Controller, Delete, Get, HttpCode, Param, Patch, Post } from '@nestjs/common';
 import { FindTopPageDto } from './dto/find-top-page.dto';
-import { FindTopPageResponse } from './dto/find-top-page.response';
-import { SaveTopPageModelDto } from './dto/save-top-page.dto';
 import { TopPageModel } from './top-page.model';
 
 @Controller('top-page')
 export class TopPageController {
-	@Get('get/:alias')
-	async get(@Param('alias') alias: string): Promise<TopPageModel> {
+	@Post('create')
+	async create(@Body() dto: Omit<TopPageModel, '_id'>) {
 
 	}
 
-	@Post('find')
-	async getByCategory(@Body() dto: FindTopPageDto): Promise<FindTopPageResponse[]> {
+	@Get(':id')
+	async get(@Param('id') id: string) {
 
 	}
 
-	@Post('save')
-	async save(@Body() dto: SaveTopPageModelDto): Promise<TopPageModel> {
+	@Delete(':id')
+	async delete(@Param('id') id: string) {
 
 	}
 
-	@Delete('delete')
-	async delete(@Body() dto: DeleteTopPageDto): Promise<SuccessResponse> {
+	@Patch(':id')
+	async patch(@Param('id') id: string, @Body() dto: TopPageModel) {
+
+	}
+
+	@HttpCode(200)
+	@Post()
+	async find(@Body() dto: FindTopPageDto) {
 
 	}
 }
