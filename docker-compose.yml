@@ -1,7 +1,7 @@
 version: '3'
 service:
   top.api:
-    image: top-api:latest
+    image: docker.pkg.github.com/alaricode/top-api-demo/top-api-demo:develop
     container_name: top-api
     restart: always
     ports:
