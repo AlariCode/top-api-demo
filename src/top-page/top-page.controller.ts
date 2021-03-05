@@ -17,7 +17,6 @@ import { IdValidationPipe } from 'src/pipes/ad-validation.pipe';
 import { CreateTopPageDto } from './dto/create-top-page.dto';
 import { FindTopPageDto } from './dto/find-top-page.dto';
 import { NOT_FOUND_TOP_PAGE_ERROR } from './top-page.constants';
-import { TopPageModel } from './top-page.model';
 import { TopPageService } from './top-page.service';
 
 @Controller('top-page')
