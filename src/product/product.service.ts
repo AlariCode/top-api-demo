@@ -52,7 +52,17 @@ export class ProductService {
 			{
 				$addFields: {
 					reviewCount: { $size: '$reviews' },
-					reviewAvg: { $avg: '$reviews.rating' }
+					reviewAvg: { $avg: '$reviews.rating' },
+					reviews: {
+						$function: {
+							body: `function (reviews) {
+								reviews.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
+								return reviews;
+							}`,
+							args: ['$reviews'],
+							lang: 'js'
+						}
+					}
 				}
 			}
 		]).exec() as (ProductModel & { review: ReviewModel[], reviewCount: number, reviewAvg: number })[];
