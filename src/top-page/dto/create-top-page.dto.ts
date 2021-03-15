@@ -57,7 +57,6 @@ export class CreateTopPageDto {
 	tagsTitle: string;
 
 	@IsArray()
-	@IsOptional()
 	@IsString({ each: true })
-	tags?: string[];
+	tags: string[];
 }
