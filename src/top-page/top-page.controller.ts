@@ -24,6 +24,7 @@ export class TopPageController {
 	constructor(private readonly topPageService: TopPageService) { }
 
 	@UseGuards(JwtAuthGuard)
+	@UsePipes(new ValidationPipe())
 	@Post('create')
 	async create(@Body() dto: CreateTopPageDto) {
 		return this.topPageService.create(dto);
@@ -58,6 +59,7 @@ export class TopPageController {
 	}
 
 	@UseGuards(JwtAuthGuard)
+	@UsePipes(new ValidationPipe())
 	@Patch(':id')
 	async patch(@Param('id') id: string, @Body() dto: CreateTopPageDto) {
 		const updatedPage = await this.topPageService.updateById(id, dto);
