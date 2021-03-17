@@ -16,6 +16,12 @@ export class CreateProductDto {
 	@IsString()
 	title: string;
 
+	@IsString()
+	link: string;
+
+	@IsNumber()
+	initialRating: string;
+
 	@IsNumber()
 	price: number;
 
