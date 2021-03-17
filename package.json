@@ -40,7 +40,8 @@
 		"passport-jwt": "^4.0.0",
 		"reflect-metadata": "^0.1.13",
 		"rimraf": "^3.0.2",
-		"rxjs": "^6.6.3"
+		"rxjs": "^6.6.3",
+		"sharp": "^0.27.2"
 	},
 	"devDependencies": {
 		"@nestjs/cli": "^7.5.1",
@@ -55,6 +56,7 @@
 		"@types/multer": "^1.4.5",
 		"@types/node": "^14.14.6",
 		"@types/passport-jwt": "^3.0.5",
+		"@types/sharp": "^0.27.1",
 		"@types/supertest": "^2.0.10",
 		"jest": "^26.6.3",
 		"prettier": "^2.1.2",
