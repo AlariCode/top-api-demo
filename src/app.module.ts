@@ -10,9 +10,11 @@ import { FilesModule } from './files/files.module';
 import { TelegramModule } from './telegram/telegram.module';
 import { getTelegramConfig } from './configs/telegram.config';
 import { HhModule } from './hh/hh.module';
+import { ScheduleModule } from '@nestjs/schedule';
 
 @Module({
 	imports: [
+		ScheduleModule.forRoot(),
 		ConfigModule.forRoot(),
 		TypegooseModule.forRootAsync({
 			imports: [ConfigModule],
