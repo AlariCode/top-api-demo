@@ -55,12 +55,14 @@ export class CreateTopPageDto {
 	hh?: HhDataDto;
 
 	@IsArray()
+	@IsOptional()
 	@ValidateNested()
 	@Type(() => TopPageAdvantageDto)
-	advantages: TopPageAdvantageDto[];
+	advantages?: TopPageAdvantageDto[];
 
 	@IsString()
-	seoText: string;
+	@IsOptional()
+	seoText?: string;
 
 	@IsString()
 	tagsTitle: string;
