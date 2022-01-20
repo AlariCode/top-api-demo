@@ -65,6 +65,6 @@ export class ProductService {
 					}
 				}
 			}
-		]).exec() as (ProductModel & { review: ReviewModel[], reviewCount: number, reviewAvg: number })[];
+		]).exec();
 	}
 }
